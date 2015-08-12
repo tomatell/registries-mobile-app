@@ -1,0 +1,9 @@
+<div class="x-portal-widget-match-standings">
+	<section class="x-portal-competition-results">
+		<header>Poradie</header>
+		<div style="width:100%;"><select style="width:100%; padding-top: 5px; padding-bottom: 5px; padding-left: 36px; margin-top: 5px; margin-bottom: 5px;" class="x-portal-competition-selector"><option>Extraliga - Muži</option></select></div>
+
+		<table style="width:100%; padding-top: 1px;" class="rowtable">
+		</table>
+	</section>
+</div>
