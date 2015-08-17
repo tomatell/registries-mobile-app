@@ -32,6 +32,7 @@
     <allow-navigation href="geo:*" />
     <platform name="android">
         <allow-intent href="market:*" />
+        <icon src="res/android/icon.png" />
         <icon src="res/android/ldpi.png" density="ldpi" />
               <icon src="res/android/mdpi.png" density="mdpi" />
               <icon src="res/android/hdpi.png" density="hdpi" />
