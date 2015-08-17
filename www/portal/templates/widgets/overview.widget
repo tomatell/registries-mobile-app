@@ -1,0 +1,14 @@
+<div class="x-portal-widget-overview">{% for article in data.articles %}
+	<article>
+			{% if article.img.img %}<img src="{{ article.img.img|safe }}">{% endif %}
+			<div >
+				<div><a href="/article/{{ article.id }}">{{ article.title|safe }}</a></div>
+				<div>{{ article.abstract|safe }}</div>
+			<div>
+	</article>
+	{% endfor %}
+	<div style=" text-align: right; clear: both;" class="x-portal-widget-overview-navigation" data-nextpage="{{data.nextPage}}">
+		<a style=" color: #CB2225; "><i class="fa fa-chevron-left x-portal-widget-overview-prev-btn"></i></a>
+		&nbsp;&nbsp;<a style=" color: #CB2225; "><i class="fa fa-chevron-right x-portal-widget-overview-next-btn"></i></a>
+	</div>
+</div>

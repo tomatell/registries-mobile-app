@@ -1,0 +1,1048 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic&subset=latin,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=PT+Sans+Narrow&subset=latin,latin-ext);
+
+body {
+	background-image: url("/portal/img/background3.jpg");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#portal-main-container {
+/*	
+	background-color: white;
+	background-image: url("/portal/img/background.jpg");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;*/
+	font-size: 14px;
+	font-family: 'Source Sans Pro', sans-serif;
+	color: gray;
+	width: 1006px;
+	margin: 0px auto;
+}
+
+#portal-header-container {
+	padding-top: 8px;
+	padding-bottom: 8px;
+	box-shadow: 0px 3px 6px gray;
+	background: white;
+}
+
+#portal-main-header {
+	position: relative;
+	width: 1006px;
+	margin: 0 auto;
+}
+
+#portal-main-header h1 {
+	color: #CB2225;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	margin-bottom: 3px;
+	text-transform: uppercase;
+	font-size: 26px;
+	margin-right: 10px;
+}
+
+#portal-main-header-logo-area {
+	position: absolute;
+	right: 10px;
+	bottom: 36px;
+}
+
+#portal-club-logos-panel-container {
+}
+
+#portal-club-logos-panel {
+	width: 1006px;
+	margin: 0 auto;
+	display: table;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+#portal-club-logos-panel .portal-club-logo {
+	background-repeat: no-repeat;
+	background-size: 60px 60px;
+	background-position: center center;
+	height: 65px;
+	width: 65px;
+	display: table-cell;
+}
+
+#portal-club-logos-panel .portal-club-logo:HOVER {
+	background-repeat: no-repeat;
+	background-size: 65px 65px;
+	background-position: center center;
+	height: 65px;
+	width: 65px;
+	display: table-cell;
+	cursor: pointer;
+}
+
+#portal-club-logos-panel .portal-club-logo-1 {
+		background-image: url("/portal/img/club1.png");
+}
+#portal-club-logos-panel .portal-club-logo-2 {
+		background-image: url("/portal/img/club2.png");
+}
+#portal-club-logos-panel .portal-club-logo-3 {
+		background-image: url("/portal/img/club3.png");
+}
+#portal-club-logos-panel .portal-club-logo-4 {
+		background-image: url("/portal/img/club4.png");
+}
+#portal-club-logos-panel .portal-club-logo-5 {
+		background-image: url("/portal/img/club5.png");
+}
+#portal-club-logos-panel .portal-club-logo-6 {
+		background-image: url("/portal/img/club6.png");
+}
+#portal-club-logos-panel .portal-club-logo-7 {
+		background-image: url("/portal/img/club7.png");
+}
+#portal-club-logos-panel .portal-club-logo-8 {
+		background-image: url("/portal/img/club8.png");
+}
+#portal-club-logos-panel .portal-club-logo-9 {
+		background-image: url("/portal/img/club9.png");
+}
+#portal-club-logos-panel .portal-club-logo-10 {
+		background-image: url("/portal/img/club10.png");
+}
+#portal-club-logos-panel .portal-club-logo-11 {
+		background-image: url("/portal/img/club11.png");
+}
+#portal-club-logos-panel .portal-club-logo-12 {
+		background-image: url("/portal/img/club12.png");
+}
+#portal-club-logos-panel .portal-club-logo-13 {
+		background-image: url("/portal/img/club13.png");
+}
+#portal-club-logos-panel .portal-club-logo-14 {
+		background-image: url("/portal/img/club14.png");
+}
+
+#portal-menu-panel-container {
+	background-color: #fff;
+	/*border-top: 1px #CB2225 solid;*/
+	box-shadow: 0px 3px 6px gray;
+}
+
+#portal-menu-panel {
+	width: 1006px;
+	margin: 0 auto;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	margin-top: 18px;
+	color: white;
+	background: #cb2225;
+}
+
+#portal-menu-panel .portal-menu-entry {
+	display: inline-block;
+	position: relative;
+	padding-top: 5px;
+	padding-bottom: 6px;
+}
+
+#portal-menu-panel .portal-menu-entry:last-child {
+	display: inline-block;
+	position: relative;
+
+}
+
+#portal-menu-panel .portal-menu-entry .portal-sub-menu {
+	position: absolute;
+	top: 100%;
+	left: -0px;
+	max-height: 0;
+	overflow: hidden;
+	margin-top: 0px;
+	color: black;
+	background-color: white;
+	box-shadow: 3px 3px 6px gray;
+	z-index: 3;
+	transition: all 0.5s ease 0;
+	-webkit-transition: all 0.5s ease 0;
+}
+
+#portal-menu-panel .portal-menu-entry .portal-sub-menu DIV {
+	padding-right: 20px;
+	padding-left: 10px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	border-top: 1px silver solid;
+	white-space: nowrap;
+	cursor: pointer;
+	color: black;
+}
+
+#portal-menu-panel .portal-menu-entry .portal-sub-menu DIV A {
+	color: black;
+	padding-left: 0;
+	font-weight: normal;
+}
+
+#portal-menu-panel .portal-menu-entry .portal-sub-menu DIV:hover {
+	color: white;
+	background: #CB2225;
+}
+
+#portal-menu-panel .portal-menu-entry .portal-sub-menu DIV:hover A {
+	color: white;
+	background: #CB2225;
+}
+
+#portal-menu-panel .portal-menu-entry .portal-sub-menu DIV:first-child {
+	border-top: 4px red solid;
+}
+
+#portal-menu-panel .portal-menu-entry A,
+		#portal-menu-panel .portal-menu-entry A:VISITED {
+	color: white;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 1.2px;
+	padding-right: 20px;
+	padding-left: 20px;
+	cursor: pointer;
+}
+
+#portal-menu-panel .portal-menu-entry A:HOVER {
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#portal-menu-panel .portal-menu-entry:HOVER .portal-sub-menu {
+	max-height: 1000px;
+	overflow: hidden;
+	transition: all 0.5s ease 0.5s;
+	-webkit-transition: all 0.5s ease 0.5s;
+}
+
+#portal-menu-bottom-panel {
+	
+}
+
+#portal-menu-bottom-container {
+	margin-left: auto;
+	margin-right: auto;
+	width: 800px;
+}
+
+.portal-menu-bottom-entry {
+	margin-left: 12px;
+	margin-right: 12px;
+	float: left;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.portal-menu-bottom-entry img {
+	margin-left: 40px;
+}
+
+.portal-menu-bottom-entry a, .portal-menu-bottom-entry a:VISITED {
+	text-decoration: none;
+}
+
+.portal-menu-bottom-entry a:hover {
+	text-decoration: underline;
+}
+
+a.portal-menu-bottom-entry-head {
+	font-weight: bold;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+.portal-bottom-sub-menu {
+	
+}
+
+#mobile-menu-toggler {
+	display: none;
+}
+
+#portal-content-container {
+	width: 1006px;
+	margin: 0 auto;
+	padding-top: 36px;
+	padding-bottom: 28px;
+}
+
+#portal-main-content {
+	display: table-cell;
+	vertical-align: top;
+}
+
+#portal-main-content.portal-main-content-editor {
+	background: white;
+	width: 100%;
+}
+
+#portal-headlines-section {
+	background-color: white;
+	padding: 10px;
+	display: inline-block;
+	width: 634px;
+	box-shadow: 0px 3px 3px gray;
+	margin-bottom: 10px;
+}
+
+.portal-article.portal-article-title {
+	background: #CB2225;
+}
+
+#portal-content-container H1 {
+	padding-bottom: 10px;
+	font-family: 'PT Sans Narrow', sans-serif;
+	font-size: 180%;
+	color: #CB2225;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+#portal-content-container .portal-article.portal-article-title H1 {
+	color: #fdfdfd;
+}
+
+#portal-content-container .x-portal-widget-category H1 {
+	text-align: left;
+}
+
+#portal-content-container .x-portal-widget-category H1,
+ 		#portal-content-container .x-portal-widget-overview H1 {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	height: 35px;
+	vertical-align: bottom;
+	font-size: 16px;
+	line-height: 20px;
+}
+
+#portal-editor-edit .x-portal-widget-category H1,
+		#portal-editor-edit .x-portal-widget-overview H1 {
+	margin-left: 0px;
+	height: 40px;
+}
+
+#portal-content-container .abstract {
+	font-family: Arial;
+	font-style: italic;
+	font-size: 14px;
+	line-height: 22px;
+}
+
+#portal-content-container A {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+#portal-side-content {
+	display: table-cell;
+	vertical-align: top;
+	padding-left: 10px;
+}
+
+.portal-side-panel, .portal-side-panel-logos {
+	background-color: white;
+	padding: 13px 10px 14px 10px;
+	width:300px;
+	box-shadow: 0px 3px 6px gray;
+	margin-bottom: 10px;
+}
+
+.portal-side-panel-logos {
+	text-align: center;
+}
+
+.portal-side-panel-logos-sep {
+	line-height: 1px;
+	font-size: 1px;
+	height: 1px;
+	background: #eee;
+	margin-bottom: 8px;
+	margin-top: 7px;
+}
+
+.portal-side-panel HEADER {
+	background-color: #CB2225;
+	color: white;
+	font-weight: bold;
+	padding: 5px;
+	border-bottom: 4px red solid;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: bold;
+	letter-spacing: 1.2px;
+}
+
+.portal-side-panel.partneri {
+	position: relative;
+	height: 334px;
+}
+
+.portal-side-panel.partneri article {
+	position: absolute;
+	left: 0px;
+	top: 44px;
+	background: white;
+	display: none;
+}
+
+#footer-container {
+	font-family: 'Arial';
+	font-size: 14px;
+	min-width: 1006px;
+	background-color: white;
+	padding-top: 10px;
+	color: #CB2225;
+	clear: both;
+	margin: 0px auto;
+	width: 1006px;
+	box-shadow: 0px 0px 4px gray;
+}
+
+#footer-container a {
+	color: #5a5a5a;
+}
+
+#main-footer {
+	background-color: #CB2225;
+	color: white;
+	position: relative;
+	min-width: 1006px;
+	clear: both;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#main-footer a, #main-footer a:VISITED, #main-footer a:HOVER {
+	color: white;
+}
+
+.portal-article {
+	font-family: Arial;
+	font-size: 14px;
+	text-align: justify;
+	background-color: white;
+	padding: 10px;
+	display: inline-block;
+	width: 656px;
+	box-shadow: 0px 3px 6px gray;
+}
+
+.portal-article.showcase {
+	margin-bottom: 10px;
+}
+
+.portal-article H1 {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 180%;
+	margin-left: 0;
+	font-style: normal;
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+.portal-article .x-portal-widget-category H1,
+		.portal-article .x-portal-widget-overview H1 {
+	padding-bottom: 0px;
+}
+.portal-article .abstract {
+	padding-bottom: 20px;
+	font-style: italic;
+	font-size: 120%;
+	text-align: justify;
+}
+
+.portal-article figure {
+	padding-bottom: 10px;
+	margin: 0;
+	-webkit-margin-before: 0;
+	-webkit-margin-after: 0;
+	-webkit-margin-start: 0;
+	-webkit-margin-end: 0;
+}
+
+.portal-article figure img {
+	width: 100%;
+}
+
+.portal-article p {
+	padding-top: 0;
+	margin-top: 0;
+}
+
+.x-portal-widget-gallery {
+	text-align: left;
+	border:1px solid white;
+	line-height: 1px;
+	padding-bottom: 10px;
+}
+
+.portal-article .x-portal-widget-gallery-thm {
+	width: 162px;
+	height: 123px;
+	padding: 0;
+	margin:0;
+	border: 0;
+	cursor: pointer;
+	display:inline-block;
+	border:0;
+	padding-left: 1px;
+	padding-bottom: 1px;
+}
+.portal-article .x-portal-widget-gallery-thm img {
+	width: 100%;
+	height: 100%;
+	border: 0;
+	display: block;
+}
+
+.x-portal-widget-gallery-viewer {
+	position: fixed;
+	z-index: 100;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.3);
+	display: none;
+	text-align: center;
+	vertical-align: middle;
+	box-shadow: 0px 3px 3px gray;
+}
+
+.x-portal-widget-gallery-viewer-window {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -256px;
+	margin-left: -338px;
+	height: 538px;
+	width: 676px;
+	background-color: white;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.x-portal-widget-gallery-viewer-window i {
+	cursor: pointer;
+}
+
+.x-portal-widget-gallery-viewer-window i:HOVER {
+	color: black;
+}
+
+.x-portal-widget-gallery-viewer-window-images {
+	height: 492px;
+	width: 656px;
+	position: relative;
+	padding: 10px;
+}
+
+.x-portal-widget-gallery-viewer-window-images img {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	width: 656px;
+	height: 492px;
+	display: none;
+}
+
+.x-portal-widget-file-list-item {
+	margin: 10px 0px;
+}
+
+.x-portal-widget-category, .x-portal-widget-overview {
+	background: white;
+	clear: both;
+}
+
+.x-portal-widget-category ARTICLE {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	overflow: hidden;
+	float: left;
+	width: 316px;
+	background: white;
+	padding-right: 10px;
+	border-bottom: #EAE8E8 1px solid;
+}
+
+.x-portal-widget-overview ARTICLE {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-right: 10px;
+	overflow: auto;
+	width: auto;
+}
+
+.x-portal-widget-category H1, .x-portal-widget-overview H1 {
+	margin-bottom: 0;
+	font-size: 140%;
+	padding-top: 0 !important;
+}
+
+.x-portal-widget-category H1:HOVER, .x-portal-widget-overview H1:HOVER {
+	color: red !important;
+}
+
+.x-portal-widget-category IMG {
+	margin-right: 10px;
+	width: 150px;
+	float: left;
+}
+
+.x-portal-widget-overview IMG {
+	margin-right: 10px;
+	width: 164px;
+	float: left;
+}
+
+
+
+.x-portal-widget-category-title {
+	
+}
+
+.x-portal-widget-category-inner {
+	margin-right: 10px;
+	color: #111;
+	overflow: hidden;
+	height: 102px;
+	line-height: 17px;
+	width: auto;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 6;
+	-webkit-box-orient: vertical;
+	text-align: left;
+}
+
+.x-portal-widget-category-navigation {
+	clear: both;
+}
+
+.x-portal-widget-showcase-view {
+	position: relative;
+	height: 492px;
+}
+
+.x-portal-widget-showcase-view article {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 492px;
+	width: 656px;
+	display: none;
+}
+
+.x-portal-widget-showcase-view-textblock {
+	position: absolute;
+	bottom:0;
+	left: 0;
+	padding: 10px;
+	background-color: rgba(219, 128, 128, 0.6);
+	color: white;
+	width: 636px;
+}
+
+.x-portal-widget-showcase-view-image {
+	width: 100%;
+	height: 491px;
+}
+
+
+#portal-content-container .x-portal-widget-showcase-view-textblock h1 {
+	color: white;
+	font-style: normal;
+}
+
+.x-portal-widget-showcase {
+	position: relative;
+}
+
+.x-portal-widget-showcase IMG {
+	width: 656px !important;
+	height: 492px !important;
+}
+
+.x-portal-widget-showcase-textblock {
+	position: absolute;
+	bottom: 10px;
+	width: 100%;
+	background-color: rgba(128, 128, 128, 0.6);
+	padding: 5px;
+	color: white;
+}
+
+.x-portal-widget-showcase-textblock H1 {
+	color: white !important;
+	text-shadow: 2px 2px 0 gray;
+}
+
+.x-portal-widget-showcase-textblock H1:HOVER {
+	color: red !important;
+}
+
+.x-portal-widget-showcase-navigation {
+	margin-top: 6px;
+	text-align: right;
+}
+
+.x-portal-widget-showcase-navigation div {
+	margin-right: 8px;
+	display: inline;
+}
+
+.x-portal-widget-showcase-navigation div a,
+		.x-portal-widget-showcase-navigation div a:VISITED,
+		.x-portal-widget-showcase-navigation div a:HOVER {
+	margin-left: 8px;
+	color: #FF0D0D;
+}
+
+.x-portal-widget-showcase-navigation a,
+		.x-portal-widget-showcase-navigation a:VISITED,
+		.x-portal-widget-showcase-navigation a:HOVER {
+	color: #FF0D0D;
+	font-weight: bolder;
+}
+
+.x-portal-widget-showcase-navigation a.prev:after,
+		.x-portal-widget-showcase-navigation a.next:after {
+	display: inline-block;
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: 18px;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+}
+
+.x-portal-widget-showcase-navigation a.prev:after {
+	content: "\f0d9";
+}
+
+.x-portal-widget-showcase-navigation a.next:after {
+	content: "\f0da";
+}
+
+.x-portal-widget-showcase-navigation div a.active {
+}
+
+.x-portal-widget-showcase-navigation div a.item::after {
+	content: "\f096";
+	display: inline-block;
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: 14px;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+}
+	
+.x-portal-widget-showcase-navigation div a.item.active::after {
+	content: "\f0c8";
+	padding-top: 10px;
+
+}
+
+.x-portal-widget-match-results header,
+		.x-portal-widget-match-standings header {
+	color: white;
+	background: #CB2225;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: bold;
+	letter-spacing: 1.2px;
+}
+
+.x-portal-results-hyphen {
+	text-align: center;
+	width: 50px;
+	background-color: #CB2225;
+	color: white;
+	font-weight: bold;
+	border-top: 1px solid white;
+}
+.x-portal-results-left-club {
+	width: 120px;
+	max-width: 120px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden; 
+	padding-right: 5px;
+	text-align: center;
+	font-size: 95%;
+}
+
+.x-portal-results-right-club {
+	width: 120px;
+	max-width: 120px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden; 
+	padding-left: 5px;
+	text-align: center;
+	font-size: 95%;
+}
+
+.x-portal-results-date {
+	text-align: center;
+	font-weight: bold;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.x-portal-results-selectable {
+	cursor: pointer;
+}
+.x-portal-results-selectable:HOVER {
+	background-color: red;
+	color: white;
+}
+
+.x-portal-competition-matches {
+	background: white;
+}
+
+@media (max-width: 1020px) {
+	
+	#portal-main-container {
+		min-width: initial;
+		width: auto;
+	}
+
+	#portal-main-header {
+		width: initial;
+	}
+
+	#portal-menu-panel {
+		width: initial;
+	}
+
+	#portal-club-logos-panel {
+		width: 90%;
+	}
+
+	#portal-content-container {
+		width: auto;
+		position: relative;
+	}
+
+	#portal-main-content {
+		display: block;
+	    width: auto;
+	    margin-right: 325px;
+	    margin-left: 4px;
+	    /*min-height: 1830px;*/
+	}
+	
+	#portal-side-content {
+	    position: absolute;
+	    top: 36px;
+	    right: 0px;
+	}
+
+	#footer-container {
+		min-width: initial;
+		width: auto;
+	}
+
+	#main-footer {
+		min-width: initial;
+	}
+
+}
+
+@media (max-width: 1020px) {
+
+	.x-portal-widget-showcase-view img {
+		width: 100%;
+	}
+
+	.portal-article {
+		width: 100%;
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	
+	.x-portal-widget-showcase-view-textblock {
+		width: 100%;
+	}
+	
+	.x-portal-widget-showcase-view article {
+		overflow: hidden;
+		width: 100%;
+	}
+
+	#portal-club-logos-panel-container {
+		display: none;
+	}
+
+	#portal-menu-bottom-panel {
+		display: none;
+	}
+
+	.x-portal-widget-category ARTICLE {
+		width: inherit;
+	}
+
+	.portal-article-title .title {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	.portal-article-contentBlock .contentBlock {
+		margin-left: 10px;
+		padding-right: 10px;
+	}
+}
+
+@media (max-width: 510px) {
+	#mobile-menu-toggler {
+		display: block;
+	}
+
+	#mobile-menu-toggler a,
+			#mobile-menu-toggler a:visited {
+		display: block;
+		font-size: 35px;
+		color: black;
+		margin-left: 8px;
+	}
+
+	#portal-menu-panel-container {
+		display: none;
+	}
+
+	#portal-menu-panel-container.mobile-visible {
+		display: block;
+	}
+
+	#portal-menu-panel {
+		width: 100%;
+	}
+
+	#portal-menu-panel .portal-menu-entry {
+		display: block;
+		font-size: 140%;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		text-align: center;
+	}
+	#portal-menu-panel .portal-menu-entry .portal-sub-menu {
+		position: static;
+		box-shadow: none;
+		max-height: inherit;
+	}
+	#portal-menu-panel .portal-menu-entry A {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	#portal-menu-panel .portal-menu-entry .portal-sub-menu DIV {
+		padding-right: 0px;
+		padding-left: 0px;
+	}
+	#portal-menu-panel-container {
+		padding-bottom: 0px;
+		position: absolute;
+		top: 46px;
+		left: 0px;
+		width: 300px;
+	}
+	#portal-menu-panel-container a.menu-login,
+			#portal-menu-panel-container a.menu-login:VISITED {
+		position: relative;
+		top: 0px;
+		right: 0px;
+		color: #666;
+	}
+	#portal-menu-panel-container .menu-login-container {
+		background: white;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		text-align: center;
+	}
+
+	#portal-menu-panel .portal-menu-entry:last-child {
+		display: block;
+		position: relative;
+		padding-top: 5px;
+		padding-bottom: 6px;
+		text-align: center;
+	}
+
+	#portal-menu-panel .portal-menu-entry .portal-sub-menu DIV,
+			#portal-menu-panel .portal-menu-entry .portal-sub-menu DIV:first-child {
+		border-top: none;
+	}
+
+	#portal-main-header h1 {
+		position: static;
+		margin-left: 10px;
+	}
+	
+	#portal-main-header-logo-area {
+		position: static;
+		margin-left: 10px;
+	}	
+
+	.portal-article-title .title {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	.portal-article-contentBlock .contentBlock {
+		margin-left: 10px;
+		padding-right: 10px;
+	}
+
+}
+
+@media (max-width: 510px) {
+	#portal-content-container {
+		width: auto;
+		position: static;
+	}
+
+	#portal-main-content {
+	    position: static;
+		display: block;
+	    width: auto;
+	    margin-right: 10px;
+	    margin-left: 10px;
+	}
+	
+	#portal-side-content {
+	    position: static;
+	    top: 0px;
+	    left: 0px;
+	    margin-right: 10px;
+	    margin-left: 10px;
+	}
+	
+	.x-portal-widget-match-results {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	
+	.x-portal-widget-category article {
+		padding-left: 5px;
+	}
+}
+
+.only-riderszone, .only-location, .portal-content-navigation {
+	display: none;
+}

@@ -1,33 +1,57 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.unionsoft.MemberyMobile" version="0.0.1"
-	xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-	<name>Membery Mobile</name>
-	<description>
+<widget id="com.unionsoft.MemberyMobile" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <feature name="BarcodeScanner">
+        <param name="android-package" value="com.phonegap.plugins.barcodescanner.BarcodeScanner" />
+    </feature>
+    <name>Membery Mobile</name>
+    <description>
 		Membery Mobile Client.
 	</description>
-	<author email="info@unionsoft.sk" href="http://www.unionsoft.sk">
+    <author email="info@unionsoft.sk" href="http://www.unionsoft.sk">
 		UnionSoft s.r.o.
 	</author>
-	<content src="https://caihp.unionsoft.sk/" />
-	<plugin name="cordova-plugin-whitelist" version="1" />
-		<access origin="*" />
-		<allow-intent href="http://*/*" />
-		<allow-intent href="https://*/*" />
-		<allow-intent href="tel:*" />
-		<allow-intent href="sms:*" />
-		<allow-intent href="mailto:*" />
-		<allow-intent href="geo:*" />
-		<allow-navigation href="http://*/*" />
-		<allow-navigation href="https://*/*" />
-		<allow-navigation href="tel:*" />
-		<allow-navigation href="sms:*" />
-		<allow-navigation href="mailto:*" />
-		<allow-navigation href="geo:*" />
-		<platform name="android">
-			<allow-intent href="market:*" />
-		</platform>
-		<platform name="ios">
-			<allow-intent href="itms:*" />
-			<allow-intent href="itms-apps:*" />
-		</platform>
+    <content src="index.html" />
+    <preference name="CROSSWALK_ANDROID_VERSION" value="14+" />
+    <preference name="CROSSWALK_ANDROID_VERSION" value="xwalk_core_library_beta:14+" />
+    <preference name="CROSSWALK_ANDROID_VERSION" value="14+" />
+    <preference name="CROSSWALK_ANDROID_VERSION" value="14" />
+    <plugin name="cordova-plugin-whitelist" version="1" />
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <allow-navigation href="http://*/*" />
+    <allow-navigation href="https://*/*" />
+    <allow-navigation href="tel:*" />
+    <allow-navigation href="sms:*" />
+    <allow-navigation href="mailto:*" />
+    <allow-navigation href="geo:*" />
+    <platform name="android">
+        <allow-intent href="market:*" />
+        <icon src="res/android/ldpi.png" density="ldpi" />
+              <icon src="res/android/mdpi.png" density="mdpi" />
+              <icon src="res/android/hdpi.png" density="hdpi" />
+              <icon src="res/android/xhdpi.png" density="xhdpi" />
+        <!-- you can use any density that exists in the Android project -->
+    <splash src="res/screen/android/splash-land-hdpi.png" density="land-hdpi"/>
+    <splash src="res/screen/android/splash-land-ldpi.png" density="land-ldpi"/>
+    <splash src="res/screen/android/splash-land-mdpi.png" density="land-mdpi"/>
+    <splash src="res/screen/android/splash-land-xhdpi.png" density="land-xhdpi"/>
+
+    <splash src="res/screen/android/splash-port-hdpi.png" density="port-hdpi"/>
+    <splash src="res/screen/android/splash-port-ldpi.png" density="port-ldpi"/>
+    <splash src="res/screen/android/splash-port-mdpi.png" density="port-mdpi"/>
+    <splash src="res/screen/android/splash-port-xhdpi.png" density="port-xhdpi"/>
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+    </platform>
+    <preference name="CROSSWALK_ANDROID_COMMANDLINE" value="--disable-pull-to-refresh-effect" />
+    <preference name="LIB_MODE" value="embedded" />
+    <!-- Enable all requests, inline styles, and eval() -->
 </widget>
