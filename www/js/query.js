@@ -1,21 +1,17 @@
-function queryDB(tx) {
-    tx.executeSql('SELECT * FROM MEMBER', [], querySuccess, errorCB);
-}
+// To retrieve a value
+var resultJson = '';
+var bannerValueArray = new Array();
+if(window.localStorage.getItem('memberyBanner')) {
+    bannerValueArray = JSON.parse(window.localStorage.getItem('memberyBanner'));
 
-function querySuccess(tx, results) {
-    alert("Returned rows = " + results.rows.length);
-    // this will be true since it was a select statement and so rowsAffected was 0
-    if (!results.rowsAffected) {
-        alert('No rows affected!');
-        return false;
+
+    var bannerContents = "";
+    for(var i = 0 ; i < bannerValueArray.length; i++) {
+        console.log('bannerValueArray[i].bannerDat', bannerValueArray[i].bannerDat);
+        bannerContents = bannerContents + unescape(bannerValueArray[i].bannerDat);
+        //console.log('bannercontents', bannerContents);
     }
-    // for an insert statement, this property will return the ID of the last inserted row
-    alert("Last inserted row ID = " + results.insertId);
+    var footerHTML = $('.scrollable-footer').html();
+    document.querySelector(".scrollable-content").innerHTML = bannerContents + '<div class=\"scrollable-footer\">' + footerHTML + '</div>';
 }
 
-function errorCB(err) {
-    alert("Error processing SQL: "+err.code);
-}
-
-var db = window.openDatabase("Database", "1.0", "Membery, 200000);
-db.transaction(queryDB, errorCB);
