@@ -48,7 +48,7 @@ $(document).ready(function(){
 					reader.onloadend = function(e) {
 						//alert("Text is: "+this.result);
 						//alert(window.localStorage.getItem('memberyBanner'));
-						document.querySelector(".scrollable-content").innerHTML = this.result;
+						//document.querySelector(".scrollable-content").innerHTML = this.result;
 						//var db = window.openDatabase("Database", "1.0", "Membery", 200000);
 						var resultJson = JSON.parse('{ \"url\" : \"' + obj[0].url + '\", \"bannerDat\": \"' + escape(this.result) + '\" }');
 						console.log(resultJson);
@@ -57,18 +57,12 @@ $(document).ready(function(){
 						if(window.localStorage.getItem('memberyBanner'))
 							bannerValueArray = JSON.parse(window.localStorage.getItem('memberyBanner'));
 						bannerValueArray.pushIfNotExist(resultJson);
-						console.log(bannerValueArray);
-						var bannerContents = "";
-						for(var i = 0 ; i < bannerValueArray.length; i++) {
-							console.log('bannerValueArray[i].bannerDat', bannerValueArray[i].bannerDat);
-							bannerContents = bannerContents + unescape(bannerValueArray[i].bannerDat);
-							console.log('bannercontents', bannerContents);
-						}
-						var footerHTML = $('.scrollable-footer').html();
-						document.querySelector(".scrollable-content").innerHTML = bannerContents + '<div class=\"scrollable-footer\">' + footerHTML + '</div>';
+						console.log('bannerValueArray', bannerValueArray);
+
 						// To store a value
 						//window.localStorage.setItem('memberyBanner', 'test');
 						window.localStorage.setItem('memberyBanner', JSON.stringify(bannerValueArray));
+						//console.log('stringfy: ', JSON.stringify(bannerValueArray));
 						//db.transaction(populateDB(tx, obj[0].url, this.result), errorCB, successCB);
 						window.location.href = obj[0].url;
 					},
@@ -88,7 +82,15 @@ $(document).ready(function(){
 			Array.prototype.pushIfNotExist = function(val) {
     			if (typeof(val) == 'undefined' || val == '') { return }
     			//val = val.replace(/^\s+|\s+$/g, "");
-    			if (this.indexOf(val) == -1) {
+    		//console.log('this.url', this[0].url);
+    		//console.log('val.url', val.url);
+    		var arrExists = false;
+    		for(var i = 0; i < this.length; i++) {
+    			if(this[i].url === val.url)
+    				arrExists = true;
+    		}
+
+    			if (!arrExists) {
         			this.push(val);
     			}
 			}

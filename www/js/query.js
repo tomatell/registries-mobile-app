@@ -12,6 +12,8 @@ if(window.localStorage.getItem('memberyBanner')) {
         //console.log('bannercontents', bannerContents);
     }
     var footerHTML = $('.scrollable-footer').html();
-    document.querySelector(".scrollable-content").innerHTML = bannerContents + '<div class=\"scrollable-footer\">' + footerHTML + '</div>';
+    var scrollableContent = document.querySelector(".scrollable-content");
+    scrollableContent.setAttribute('style', 'margin-top: 5px; margin-bottom: 5px; padding: 10px; background-color: white;')
+    scrollableContent.innerHTML = bannerContents + '<div class=\"scrollable-footer\">' + footerHTML + '</div>';
 }
 
