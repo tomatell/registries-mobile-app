@@ -57,7 +57,7 @@ $(document).ready(function(){
 						if(window.localStorage.getItem('memberyBanner'))
 							bannerValueArray = JSON.parse(window.localStorage.getItem('memberyBanner'));
 						bannerValueArray.pushIfNotExist(resultJson);
-						console.log('bannerValueArray', bannerValueArray);
+						//console.log('bannerValueArray', bannerValueArray);
 
 						// To store a value
 						//window.localStorage.setItem('memberyBanner', 'test');
