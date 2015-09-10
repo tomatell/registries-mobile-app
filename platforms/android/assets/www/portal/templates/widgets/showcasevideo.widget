@@ -1,0 +1,25 @@
+<div class="x-portal-widget-showcase-view">
+	{% for article in data.articles %}
+		<article class="showcase-item-{{ article.id }}">
+			{% if article.video.src %}
+				<iframe width="656" height="492" src="{{ article.video.src|safe }}" frameborder="0" allowfullscreen></iframe>
+			{% endif %}
+			<div class="x-portal-widget-showcasevideo-view-textblock">
+				<a href="/article/{{ article.id }}">{{ article.video.title|safe }}</a>
+				{{ article.video.subTitle|safe }}
+			</div>
+		</article>
+	{% endfor %}
+</div>
+
+<div class="x-portal-widget-showcase-navigation">
+	<a href="#" class="prev">
+	</a>
+	<div>
+		{% for article in data.articles %}
+			<a href="#" class="item"></span>
+		{% endfor %}
+	</div>
+	<a href="#" class="next">
+	</a>
+</div>
