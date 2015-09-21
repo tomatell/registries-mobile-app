@@ -27,6 +27,9 @@ import org.xwalk.core.XWalkResourceClient;
 import org.xwalk.core.XWalkUIClient;
 import org.xwalk.core.XWalkView;
 import org.crosswalk.engine.*;
+import org.apache.cordova.engine.*;
+import android.webkit.WebSettings;
+
 
 public class MainActivity extends CordovaActivity
 {
@@ -35,10 +38,9 @@ public class MainActivity extends CordovaActivity
     {
         super.onCreate(savedInstanceState);
         XWalkPreferences.setValue(XWalkPreferences.REMOTE_DEBUGGING, true);
-
         // Set by <content src="index.html" /> in config.xml
-        //XWalkPreferences.setValue(XWalkPreferences.REMOTE_DEBUGGING, true);
         loadUrl(launchUrl);
 
     }
+    
 }

@@ -14,10 +14,10 @@ import android.content.Intent;
 import android.util.Log;
 
 public class MemberyActivity extends CordovaActivity {
-		private XWalkCordovaView mXwalkView;
+		private XWalkView mXwalkView;
 
 	   class MemberyResourceClient extends XWalkResourceClient {
-			MemberyResourceClient(XWalkCordovaView view) {
+			MemberyResourceClient(XWalkView view) {
                super(view);
            }
             @Override
@@ -51,8 +51,8 @@ public class MemberyActivity extends CordovaActivity {
        public void onCreate(Bundle savedInstanceState) {
            super.onCreate(savedInstanceState);
            XWalkPreferences.setValue(XWalkPreferences.REMOTE_DEBUGGING, true);
-           //mXwalkView = new XWalkView(this, this);
-           //setContentView(mXwalkView);
+           mXwalkView = new XWalkView(this, this);
+           setContentView(mXwalkView);
            mXwalkView.setResourceClient(new MemberyResourceClient(mXwalkView));
            mXwalkView.setUIClient(new MemberyUIClient(mXwalkView));
            mXwalkView.load("file:///android_asset/www/index.html", null);
@@ -60,7 +60,7 @@ public class MemberyActivity extends CordovaActivity {
            //loadUrl(Config.getStartUrl());
        }
 
-       /*@Override
+       @Override
        protected void onActivityResult(int requestCode, int resultCode, Intent data) {
            if (mXwalkView != null) {
                mXwalkView.onActivityResult(requestCode, resultCode, data);
@@ -72,5 +72,5 @@ public class MemberyActivity extends CordovaActivity {
            if (mXwalkView != null) {
                mXwalkView.onNewIntent(intent);
            }
-       }*/
+       }
    }

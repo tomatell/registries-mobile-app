@@ -6,14 +6,14 @@ $(document).ready(function(){
 	
 		cordova.plugins.barcodeScanner.scan(
 		function (result) {
-		  alert("We got a barcode\n" +
-				"Result: " + result.text + "\n" +
-				"Format: " + result.format + "\n" +
-				"Cancelled: " + result.cancelled);
+		  //alert("We got a barcode\n" +
+				//"Result: " + result.text + "\n" +
+				//"Format: " + result.format + "\n" +
+				//"Cancelled: " + result.cancelled);
 			//document.getElementById("frame").src = result.text;
 
 		 	var obj = JSON.parse('[' + result.text + ']'); 
-			console.log(obj[0]);
+			//console.log(obj[0]);
 			//alert("url:" + obj[0].url);
 			//alert("bannerDat:" + obj[0].bannerDat);
 			var fileTransfer = new FileTransfer();
@@ -64,7 +64,8 @@ $(document).ready(function(){
 						window.localStorage.setItem('memberyBanner', JSON.stringify(bannerValueArray));
 						//console.log('stringfy: ', JSON.stringify(bannerValueArray));
 						//db.transaction(populateDB(tx, obj[0].url, this.result), errorCB, successCB);
-						window.location.href = obj[0].url;
+						alert('jump to:'+obj[0].url + '#/login?regid=' + regId);
+						window.location.href = obj[0].url + '#/login?regid=' + regId;
 					},
 					function (error) {
 		  				alert("Scanning failed: " + error);

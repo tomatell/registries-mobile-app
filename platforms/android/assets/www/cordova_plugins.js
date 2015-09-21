@@ -27,6 +27,34 @@ module.exports = [
         ]
     },
     {
+        "file": "plugins/com.phonegap.plugins.PushPlugin/www/PushNotification.js",
+        "id": "com.phonegap.plugins.PushPlugin.PushNotification",
+        "clobbers": [
+            "PushNotification"
+        ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.media/www/MediaError.js",
+        "id": "org.apache.cordova.media.MediaError",
+        "clobbers": [
+            "window.MediaError"
+        ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.media/www/Media.js",
+        "id": "org.apache.cordova.media.Media",
+        "clobbers": [
+            "window.Media"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-device/www/device.js",
+        "id": "cordova-plugin-device.device",
+        "clobbers": [
+            "device"
+        ]
+    },
+    {
         "file": "plugins/cordova-plugin-file/www/DirectoryEntry.js",
         "id": "cordova-plugin-file.DirectoryEntry",
         "clobbers": [
@@ -180,6 +208,9 @@ module.exports.metadata =
     "cordova-plugin-crosswalk-webview": "1.3.0-dev",
     "phonegap-plugin-barcodescanner": "4.0.2",
     "cordova-plugin-file-transfer": "1.2.2-dev",
+    "com.phonegap.plugins.PushPlugin": "2.5.0",
+    "org.apache.cordova.media": "0.2.16",
+    "cordova-plugin-device": "1.0.1",
     "cordova-plugin-file": "3.0.0"
 }
 // BOTTOM OF METADATA

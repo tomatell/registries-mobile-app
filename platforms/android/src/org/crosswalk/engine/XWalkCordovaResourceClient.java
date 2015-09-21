@@ -44,6 +44,7 @@ import android.webkit.ValueCallback;
 import android.webkit.WebResourceResponse;
 import android.content.Intent;
 import android.util.Log;
+import java.util.HashMap;
 
 public class XWalkCordovaResourceClient extends XWalkResourceClient {
 
