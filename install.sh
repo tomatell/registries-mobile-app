@@ -14,4 +14,5 @@ cordova plugin add https://github.com/apache/cordova-plugin-file-transfer.git
 cordova plugin add https://github.com/phonegap-build/PushPlugin.git
 cordova plugin add cordova-plugin-device
 cordova plugin add org.apache.cordova.media
+cordova plugin add https://github.com/danjarvis/cordova-plugin-crosswalk-certificate
 cordova platform add android

@@ -64,7 +64,7 @@ $(document).ready(function(){
 						window.localStorage.setItem('memberyBanner', JSON.stringify(bannerValueArray));
 						//console.log('stringfy: ', JSON.stringify(bannerValueArray));
 						//db.transaction(populateDB(tx, obj[0].url, this.result), errorCB, successCB);
-						alert('jump to:'+obj[0].url + '#/login?regid=' + regId);
+						//alert('jump to:'+obj[0].url + '#/login?regid=' + regId);
 						window.location.href = obj[0].url + '#/login?regid=' + regId;
 					},
 					function (error) {

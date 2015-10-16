@@ -20,6 +20,8 @@ var app = {
     // Application Constructor
     initialize: function() {
         this.bindEvents();
+        // This is for alph testing to allow untrusted SSL certificate. Set it to fals on production.
+        cordova.plugins.certificates.trustUnsecureCerts(true);
     },
     // Bind Event Listeners
     //
