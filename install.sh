@@ -16,3 +16,5 @@ cordova plugin add cordova-plugin-device
 cordova plugin add org.apache.cordova.media
 cordova plugin add https://github.com/danjarvis/cordova-plugin-crosswalk-certificate
 cordova platform add android
+cp -r src platforms/android
+cp build.gradle platforms/android

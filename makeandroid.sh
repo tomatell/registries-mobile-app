@@ -4,7 +4,7 @@ if [ $# -eq 0 ]
 #elif [ -z "$2" ]
 #  then echo 'The build keystore path is empty. Type makeandroid.sh 000xxx keystorepath.'
 else
-cordova build android --release
+cordova build android --release 
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 #jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore $2 $DIR/platforms/android/build/outputs/apk/android-armv7-release-unsigned.apk MemberyMobile
 #jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore $2 $DIR/platforms/android/build/outputs/apk/android-x86-release-unsigned.apk MemberyMobile
