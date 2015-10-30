@@ -18,3 +18,5 @@ cordova plugin add https://github.com/danjarvis/cordova-plugin-crosswalk-certifi
 cordova platform add android
 cp -r src platforms/android
 cp build.gradle platforms/android
+mvn install:install-file -DgroupId=org.xwalk -DartifactId=xwalk_core_library_beta -Dversion=15.0.0.0 -Dpackaging=aar -Dfile=xwalk_core_library.aar -DgeneratePom=true
+cp -r ~/.m2/repository/org/xwalk ANDROID_HOME/extras/google/m2repository/org/

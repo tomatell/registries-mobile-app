@@ -159,9 +159,13 @@ task cdvPrintProps << {
 }
 
 android {
-lintOptions {
-    abortOnError false
-}
+      lintOptions {
+          checkReleaseBuilds false
+          // Or, if you prefer, you can continue to check for errors in release builds,
+          // but continue the build even when errors are found:
+          abortOnError false
+      }
+
     sourceSets {
         main {
             manifest.srcFile 'AndroidManifest.xml'
@@ -176,7 +180,8 @@ lintOptions {
     }
 
     defaultConfig {
-        versionCode cdvVersionCode ?: Integer.parseInt("" + privateHelpers.extractIntFromManifest("versionCode") + "0")
+        //versionCode cdvVersionCode ?: Integer.parseInt("" + privateHelpers.extractIntFromManifest("versionCode") + "0")
+        versionCode cdvVersionCode ?: Integer.parseInt("" + privateHelpers.extractIntFromManifest("versionCode") )
         if (cdvMinSdkVersion != null) {
             minSdkVersion cdvMinSdkVersion
         }
@@ -188,13 +193,15 @@ lintOptions {
     if (Boolean.valueOf(cdvBuildMultipleApks)) {
         productFlavors {
             armv7 {
-                versionCode cdvVersionCode ?: defaultConfig.versionCode + 2
+                //versionCode cdvVersionCode ?: defaultConfig.versionCode + 2
+                versionCode cdvVersionCode ?: defaultConfig.versionCode
                 ndk {
                     abiFilters "armeabi-v7a", ""
                 }
             }
             x86 {
-                versionCode cdvVersionCode ?: defaultConfig.versionCode + 4
+                //versionCode cdvVersionCode ?: defaultConfig.versionCode + 4
+                versionCode cdvVersionCode ?: defaultConfig.versionCode
                 ndk {
                     abiFilters "x86", ""
                 }

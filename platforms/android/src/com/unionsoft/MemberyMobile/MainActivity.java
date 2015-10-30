@@ -37,6 +37,7 @@ public class MainActivity extends CordovaActivity
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+        XWalkPreferences.setValue(XWalkPreferences.ANIMATABLE_XWALK_VIEW, false);
         XWalkPreferences.setValue(XWalkPreferences.REMOTE_DEBUGGING, true);
         // Set by <content src="index.html" /> in config.xml
         loadUrl(launchUrl);
