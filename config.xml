@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.unionsoft.MemberyMobile" version="0.0.1" android-versionCode ="13" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.unionsoft.MemberyMobile" version="0.0.1" android-versionCode ="15" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <feature name="BarcodeScanner">
         <param name="android-package" value="com.phonegap.plugins.barcodescanner.BarcodeScanner" />
     </feature>
@@ -78,7 +78,7 @@
     <preference name="CROSSWALK_ANDROID_COMMANDLINE" value="--disable-pull-to-refresh-effect" />
     <preference name="LIB_MODE" value="embedded" />
     <!--<preference name="xwalkVersion" value="14+" />-->
-    <preference name="xwalkVersion" value="xwalk_core_library_beta:15.0.0.0" />
+    <preference name="xwalkVersion" value="xwalk_core_library_beta_15.44.384.13:15.44.384.13" />
     <preference name="xwalkCommandLine" value="--disable-pull-to-refresh-effect" />
     <preference name="xwalkMode" value="embedded" />
     <preference name="EnableViewportScale" value="true" />
@@ -95,4 +95,5 @@
     <preference name="UIWebViewDecelerationSpeed" value="fast" />
     <preference name="StatusBarOverlaysWebView" value="false" />
     <preference name="UIStatusBarHidden" value="true" />
+    <preference name="BackgroundColor" value="0xffffffff"/>
 </widget>
