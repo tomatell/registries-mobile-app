@@ -38,6 +38,7 @@ var app = {
         var push = PushNotification.init({
             "android": {
                 "senderID": "membery-mobile"
+                "ecb":"onNotification",
             },
             "ios": {"alert": "true", "badge": "true", "sound": "true"}, 
             "windows": {} 

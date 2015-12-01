@@ -1,13 +1,6 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
 module.exports = [
     {
-        "file": "plugins/com.phonegap.plugins.PushPlugin/www/PushNotification.js",
-        "id": "com.phonegap.plugins.PushPlugin.PushNotification",
-        "clobbers": [
-            "PushNotification"
-        ]
-    },
-    {
         "file": "plugins/cordova-plugin-crosswalk-certificate/www/certificate.js",
         "id": "cordova-plugin-crosswalk-certificate.Certificates",
         "clobbers": [
@@ -213,12 +206,18 @@ module.exports = [
         "clobbers": [
             "cordova.plugins.barcodeScanner"
         ]
+    },
+    {
+        "file": "plugins/com.phonegap.plugins.PushPlugin/www/PushNotification.js",
+        "id": "com.phonegap.plugins.PushPlugin.PushNotification",
+        "clobbers": [
+            "PushNotification"
+        ]
     }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
-    "com.phonegap.plugins.PushPlugin": "2.5.0",
     "cordova-plugin-crosswalk-certificate": "2.0.1",
     "cordova-plugin-crosswalk-webview": "1.3.0-dev",
     "cordova-plugin-device": "1.0.1",
@@ -227,7 +226,8 @@ module.exports.metadata =
     "cordova-plugin-statusbar": "1.0.1",
     "cordova-plugin-whitelist": "1.0.0",
     "org.apache.cordova.media": "0.2.16",
-    "phonegap-plugin-barcodescanner": "4.0.2"
+    "phonegap-plugin-barcodescanner": "4.0.2",
+    "com.phonegap.plugins.PushPlugin": "2.5.0"
 }
 // BOTTOM OF METADATA
 });

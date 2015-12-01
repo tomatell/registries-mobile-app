@@ -50,7 +50,8 @@ $(document).ready(function(){
 						//alert(window.localStorage.getItem('memberyBanner'));
 						//document.querySelector(".scrollable-content").innerHTML = this.result;
 						//var db = window.openDatabase("Database", "1.0", "Membery", 200000);
-						var resultJson = JSON.parse('{ \"url\" : \"' + obj[0].url + '\", \"bannerDat\": \"' + escape(this.result) + '\" }');
+						var replaceReg = '#/login?regid=' + regId;
+						var resultJson = JSON.parse('{ \"url\" : \"' + obj[0].url + '\", \"bannerDat\": \"' + escape(this.result).replace('%24regid', replaceReg) + '\" }');
 						console.log(resultJson);
 						// To retrieve a value
 						var bannerValueArray = new Array();

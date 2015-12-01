@@ -72,10 +72,10 @@
     <script src="cordova.js"></script>
     <script src="bower_components/angular-base64/angular-base64.min.js"></script>
 	<script type="text/javascript" src="js/PushNotification.js"></script>
+	<script>var regId = '';</script>
         
         <script type="text/javascript">
             var pushNotification;
-			var regId = '';
             
             function onDeviceReady() {
 				// This is for alph testing to allow untrusted SSL certificate. Set it to fals on production.
@@ -105,7 +105,7 @@
 		      $("#app-status-ul").append('<li>registering ' + device.platform + '</li>');
                 	if (device.platform == 'android' || device.platform == 'Android' ||
                             device.platform == 'amazon-fireos' ) {
-			pushNotification.register(successHandler, errorHandler, {"senderID":"37091511118","ecb":"onNotification"});		// required!
+						pushNotification.register(successHandler, errorHandler, {"senderID":"850139036961","ecb":"onNotification","forceShow" : "true"});		// required!
 					} else {
                     	pushNotification.register(tokenHandler, errorHandler, {"badge":"true","sound":"true","alert":"true","ecb":"onNotificationAPN"});	// required!
                 	}
@@ -230,7 +230,7 @@
 <div class="scrollable-content" style="margin-top: 5px; margin-bottom: 5px; padding: 10px; background-color: #FFCE0D">
 <center><img src='img/homelogo.png' /> </center>
 <h3>To access preferred Membery sites, open a web browser on desktop or other device and log into the Membery sites. After the login, click on <i class="icon-question-circle"></i> icon and display the help page. A QR-Code will be generated on the fly. Scan the QR-Code by clicking the "SCAN QR-CODE" button below.</h3>
-<!--<div id="app-status-div">
+<!---<div id="app-status-div">
 				<ul id="app-status-ul">
 					<li>Notifications</li>
 				</ul>

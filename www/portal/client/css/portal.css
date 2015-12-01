@@ -2,7 +2,7 @@
 @import url(http://fonts.googleapis.com/css?family=PT+Sans+Narrow&subset=latin,latin-ext);
 
 body {
-	background-image: url("/portal/img/background3.jpg");
+	/*background-image: url("/portal/img/background3.jpg");*/
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
