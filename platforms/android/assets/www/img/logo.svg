@@ -165,7 +165,7 @@
      inkscape:current-layer="layer1"
      inkscape:document-units="px"
      inkscape:cy="-21.767136"
-     inkscape:cx="22.878426"
+     inkscape:cx="-36.872098"
      inkscape:zoom="2.8284271"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
@@ -219,7 +219,7 @@
        id="text5264" />
     <g
        id="g4837"
-       style="filter:url(#filter4841)">
+       style="filter:url(#filter4841);fill:#000000">
       <circle
          r="3.4914546"
          inkscape:export-ydpi="179.62755"
@@ -227,14 +227,14 @@
          cy="903.2464"
          cx="162.19089"
          id="path3336"
-         style="fill:#ffce0d;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.01709145px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.01709145px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
       <path
          inkscape:export-ydpi="179.62755"
          inkscape:export-xdpi="179.62755"
          inkscape:connector-curvature="0"
          id="path3336-5"
          d="m 162.39654,907.16872 a 5.8324715,5.2579915 0 0 0 -3.98918,1.42723 l 3.94462,9.01168 4.02339,-9.01651 a 5.8324715,5.2579915 0 0 0 -3.97883,-1.4224 z"
-         style="fill:#ffce0d;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.02710861px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.02710861px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     </g>
   </g>
 </svg>

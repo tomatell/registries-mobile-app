@@ -13,7 +13,7 @@ if(window.localStorage.getItem('memberyBanner')) {
     }
     var footerHTML = $('.scrollable-footer').html();
     var scrollableContent = document.querySelector(".scrollable-content");
-    scrollableContent.setAttribute('style', 'margin-top: 5px; margin-bottom: 5px; padding: 10px; background-color: white;')
-    scrollableContent.innerHTML = '<!---<div id=\"app-status-div\"><ul id=\"app-status-ul\"><li>Notifications</li></ul></div>-->' + bannerContents + '<div class=\"scrollable-footer\">' + footerHTML + '</div>';
+    scrollableContent.setAttribute('style', 'margin-top: 5px; margin-bottom: 5px; padding: 10px; background-color: white;');
+    scrollableContent.innerHTML = '<!---<div id=\"app-status-div\"><ul id=\"app-status-ul\"><li>Notifications</li></ul></div>-->' + bannerContents + '<div class=\"scrollable-footer\">' + footerHTML + '</div></div>';
 }
 

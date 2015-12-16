@@ -159,13 +159,6 @@ task cdvPrintProps << {
 }
 
 android {
-      lintOptions {
-          checkReleaseBuilds false
-          // Or, if you prefer, you can continue to check for errors in release builds,
-          // but continue the build even when errors are found:
-          abortOnError false
-      }
-
     sourceSets {
         main {
             manifest.srcFile 'AndroidManifest.xml'
@@ -180,8 +173,7 @@ android {
     }
 
     defaultConfig {
-        //versionCode cdvVersionCode ?: Integer.parseInt("" + privateHelpers.extractIntFromManifest("versionCode") + "0")
-        versionCode cdvVersionCode ?: Integer.parseInt("" + privateHelpers.extractIntFromManifest("versionCode") )
+        versionCode cdvVersionCode ?: Integer.parseInt("" + privateHelpers.extractIntFromManifest("versionCode") + "0")
         if (cdvMinSdkVersion != null) {
             minSdkVersion cdvMinSdkVersion
         }
@@ -193,15 +185,13 @@ android {
     if (Boolean.valueOf(cdvBuildMultipleApks)) {
         productFlavors {
             armv7 {
-                //versionCode cdvVersionCode ?: defaultConfig.versionCode + 2
-                versionCode cdvVersionCode ?: defaultConfig.versionCode
+                versionCode cdvVersionCode ?: defaultConfig.versionCode + 2
                 ndk {
                     abiFilters "armeabi-v7a", ""
                 }
             }
             x86 {
-                //versionCode cdvVersionCode ?: defaultConfig.versionCode + 4
-                versionCode cdvVersionCode ?: defaultConfig.versionCode
+                versionCode cdvVersionCode ?: defaultConfig.versionCode + 4
                 ndk {
                     abiFilters "x86", ""
                 }
@@ -256,9 +246,6 @@ dependencies {
     // SUB-PROJECT DEPENDENCIES START
     debugCompile project(path: "CordovaLib", configuration: "debug")
     releaseCompile project(path: "CordovaLib", configuration: "release")
-    compile "com.android.support:support-v13:22+"
-    compile "com.android.support:support-v4:+"
-    compile "com.google.android.gms:play-services-gcm:+"
     // SUB-PROJECT DEPENDENCIES END
 }
 

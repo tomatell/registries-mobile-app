@@ -1,8 +1,8 @@
 #!/bin/bash
 if [ $# -eq 0 ]
   then echo 'The build version number is empty. Type makeandroid.sh 000xxx keystorepath.'
-#elif [ -z "$2" ]
-#  then echo 'The build keystore path is empty. Type makeandroid.sh 000xxx keystorepath.'
+elif [ -z "$2" ]
+  then echo 'The build keystore path is empty. Type makeandroid.sh 000xxx keystorepath.'
 else
 cordova build android --release 
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )

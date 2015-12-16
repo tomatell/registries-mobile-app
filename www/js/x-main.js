@@ -12,7 +12,6 @@
 		'ui.ace',
 		'reCAPTCHA',
 		'ngCordova'
-
 		// 'x-security',
 		// 'personal-page',
 		// 'psui-notification'
@@ -126,7 +125,7 @@
 		});
 		$routeProvider.when('/help', {templateUrl: '/dataset/get/partials/x-help.html', controller: 'xpsui:HelpPageCtrl'});
 
-		$routeProvider.otherwise({templateUrl: '/partials/x-login.html', controller: 'xpsui:SecurityLoginCtrl'});
+		$routeProvider.otherwise({templateUrl: 'index.html', controller: 'xpsui:detectDeviceCtrl'});
 
 		loggingProvider.setLevel(5);
 	}])
@@ -182,47 +181,7 @@
     "senderID": "membery-mobile",
   };
 
-  document.addEventListener("deviceready", function(){
-    $cordovaPush.register(androidConfig).then(function(result) {
-      // Success
-	  alert('success');
-    }, function(err) {
-      // Error
-    })
-
-    $rootScope.$on('$cordovaPush:notificationReceived', function(event, notification) {
-      switch(notification.event) {
-        case 'registered':
-          if (notification.regid.length > 0 ) {
-            alert('registration ID = ' + notification.regid);
-          }
-          break;
-
-        case 'message':
-          // this is the actual push notification. its format depends on the data model from the push server
-          alert('message = ' + notification.message + ' msgCount = ' + notification.msgcnt);
-          break;
-
-        case 'error':
-          alert('GCM error = ' + notification.msg);
-          break;
-
-        default:
-          alert('An unknown GCM event has occurred');
-          break;
-      }
-    });
-
-
-    // WARNING: dangerous to unregister (results in loss of tokenID)
-    $cordovaPush.unregister(options).then(function(result) {
-      // Success!
-    }, function(err) {
-      // Error
-    })
-
-  }, false);
-		
+	
 	}]);
 
 

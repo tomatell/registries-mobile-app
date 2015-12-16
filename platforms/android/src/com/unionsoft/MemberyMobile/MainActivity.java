@@ -20,16 +20,7 @@
 package com.unionsoft.MemberyMobile;
 
 import android.os.Bundle;
-import android.widget.*;
 import org.apache.cordova.*;
-import org.xwalk.core.XWalkPreferences;
-import org.xwalk.core.XWalkResourceClient;
-import org.xwalk.core.XWalkUIClient;
-import org.xwalk.core.XWalkView;
-import org.crosswalk.engine.*;
-import org.apache.cordova.engine.*;
-import android.webkit.WebSettings;
-
 
 public class MainActivity extends CordovaActivity
 {
@@ -37,11 +28,7 @@ public class MainActivity extends CordovaActivity
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        XWalkPreferences.setValue(XWalkPreferences.ANIMATABLE_XWALK_VIEW, false);
-        XWalkPreferences.setValue(XWalkPreferences.REMOTE_DEBUGGING, true);
         // Set by <content src="index.html" /> in config.xml
         loadUrl(launchUrl);
-
     }
-    
 }

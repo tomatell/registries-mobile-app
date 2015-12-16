@@ -20,8 +20,6 @@ var app = {
     // Application Constructor
     initialize: function() {
         this.bindEvents();
-        // This is for alph testing to allow untrusted SSL certificate. Set it to fals on production.
-        cordova.plugins.certificates.trustUnsecureCerts(true);
     },
     // Bind Event Listeners
     //
@@ -37,7 +35,9 @@ var app = {
     onDeviceReady: function() {
         var push = PushNotification.init({
             "android": {
-                "senderID": "membery-mobile"
+                "senderID":"850139036961",
+                "ecb":"onNotification",
+                "forceShow" : "true"
             },
             "ios": {"alert": "true", "badge": "true", "sound": "true"}, 
             "windows": {} 
@@ -46,24 +46,29 @@ var app = {
         push.on('registration', function(data) {
             console.log("registration event");
             document.getElementById("regId").innerHTML = data.registrationId;
+            regId = data.registrationId;
             console.log(JSON.stringify(data));
         });
 
         push.on('notification', function(data) {
-        	console.log("notification event");
+            console.log("notification event");
             console.log(JSON.stringify(data));
             var cards = document.getElementById("cards");
-            var push = '<div class="row">' +
-		  		  '<div class="col s12 m6">' +
-				  '  <div class="card darken-1">' +
-				  '    <div class="card-content black-text">' +
-				  '      <span class="card-title black-text">' + data.title + '</span>' +
-				  '      <p>' + data.message + '</p>' +
-				  '    </div>' +
-				  '  </div>' +
-				  ' </div>' +
-				  '</div>';
-            cards.innerHTML += push;
+            var card = '<div class="row">' +
+                  '<div class="col s12 m6">' +
+                  '  <div class="card darken-1">' +
+                  '    <div class="card-content black-text">' +
+                  '      <span class="card-title black-text">' + data.title + '</span>' +
+                  '      <p>' + data.message + '</p>' +
+                  '    </div>' +
+                  '  </div>' +
+                  ' </div>' +
+                  '</div>';
+            cards.innerHTML += card;
+            
+            push.finish(function () {
+                console.log('finish successfully called');
+            });
         });
 
         push.on('error', function(e) {

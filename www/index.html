@@ -1,127 +1,178 @@
-<!DOCTYPE html>
 <!--[if lt IE 7 ]> <html class="ie ie6 ie-lt10 ie-lt9 ie-lt8 ie-lt7 no-js" lang="en"> <![endif]-->
 <!--[if IE 7 ]>    <html class="ie ie7 ie-lt10 ie-lt9 ie-lt8 no-js" lang="en"> <![endif]-->
 <!--[if IE 8 ]>    <html class="ie ie8 ie-lt10 ie-lt9 no-js" lang="en"> <![endif]-->
 <!--[if IE 9 ]>    <html class="ie ie9 ie-lt10 no-js" lang="en"> <![endif]-->
-<!--[if gt IE 9]><!--><html class="no-js" lang="en"  moznomarginboxes mozdisallowselectionprint><!--<![endif]-->
+<!--[if gt IE 9]><!-->
+
+<html class="no-js" lang="en" moznomarginboxes="" mozdisallowselectionprint="" xmlns=
+"http://www.w3.org/1999/xhtml">
+<!--<![endif]-->
 
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
-	<meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="no" />
-	<meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no' />
-    <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
+  <meta name="generator" content=
+  "Membery Mobile" />
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Security-Policy" content=
+  "default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="no" />
+  <meta name='viewport' content=
+  'width=device-width, initial-scale=1, user-scalable=no' />
+  <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
 
-	<title>Membery Mobile</title>
-	<meta name="author" content="Tom Tanaka" />
-	<meta name="description" content="Membery Mobile" />
-	<meta name="copyright" content="Unionsoft s.r.o." />
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Membery Mobile</title>
+  <meta name="author" content="Tom Tanaka" />
+  <meta name="description" content="Membery Mobile" />
+  <meta name="copyright" content="Unionsoft s.r.o." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/x.css" type="text/css" />
+  <link rel="stylesheet" href="css/x-default.css" type="text/css" />
+  <link rel="stylesheet" href="lib/components-font-awesome/css/font-awesome.min.css"
+  type="text/css" />
+  <link rel="shortcut icon" href="img/icon.ico" />
+  <link rel="stylesheet" href="css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="css/portal-editor.css" type="text/css" />
+  <link rel="stylesheet" href="portal/css/portal.css" type="text/css" />
+  <!-- Mobile Angular UI CSS -->
+  <link rel="stylesheet" href="dist/css/mobile-angular-ui-hover.min.css" type=
+  "text/css" />
+  <link rel="stylesheet" href="dist/css/mobile-angular-ui-base.min.css" type=
+  "text/css" />
+  <link rel="stylesheet" href="dist/css/mobile-angular-ui-desktop.min.css" type=
+  "text/css" /><!-- javascript global -->
 
-	<link rel="stylesheet" href="css/x.css" />
-	<link rel="stylesheet" href="css/x-default.css" />
-	<link rel="stylesheet" href="lib/components-font-awesome/css/font-awesome.min.css">
-	<link rel="shortcut icon" href="img/icon.ico" />
+  <script src="lib/rangy/rangy-core.js" type="text/javascript">
+</script>
+  <script src="lib/angular/angular.js" type="text/javascript">
+</script>
+  <script src="lib/angular-re-captcha/angular-re-captcha.js" type="text/javascript">
+</script>
+  <script src="lib/angular-route/angular-route.js" type="text/javascript">
+</script>
+  <script src="lib/angular-cookies/angular-cookies.js" type="text/javascript">
+</script>
+  <script src="lib/angular-translate/angular-translate.js" type="text/javascript">
+</script>
+  <script src="lib/angular-translate-handler-log/angular-translate-handler-log.min.js"
+  type="text/javascript">
+</script>
+  <script src="lib/angular-translate-storage-cookie/angular-translate-storage-cookie.js"
+  type="text/javascript">
+</script>
+  <script src="lib/ace-builds/src-min-noconflict/ace.js" type="text/javascript">
+</script>
+  <script src="lib/angular-ui-ace/ui-ace.js" type="text/javascript">
+</script>
+  <script src="bower_components/jquery/dist/jquery.min.js" type="text/javascript">
+</script>
+  <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"
+  type="text/javascript">
+</script>
+  <script src="bower_components/angular-animate/angular-animate.js" type=
+  "text/javascript">
+</script>
+  <script src="bower_components/angular-cookies/angular-cookies.js" type=
+  "text/javascript">
+</script>
+  <script src="bower_components/angular-resource/angular-resource.js" type=
+  "text/javascript">
+</script>
+  <script src="bower_components/angular-route/angular-route.js" type="text/javascript">
+</script>
+  <script src="bower_components/angular-sanitize/angular-sanitize.js" type=
+  "text/javascript">
+</script>
+  <script src="bower_components/angular-touch/angular-touch.js" type="text/javascript">
+</script><!-- javascript new libs-->
+  <script src="bower_components/angular-base64/angular-base64.min.js" type=
+  "text/javascript">
+</script>
+  <script src="dist/js/mobile-angular-ui.min.js" type="text/javascript">
+</script>
+  <script src="dist/js/mobile-angular-ui.gestures.min.js" type="text/javascript">
+</script>
+  <script src="dist/js/mobile-angular-ui.migrate.min.js" type="text/javascript">
+</script>
+ <script src="dist/js/ng-cordova.min.js" type="text/javascript">
+</script>
+  <script src="js/xpsui.min.js" type="text/javascript">
+</script>
+  <script src="js/x-main.js" type="text/javascript">
+</script><!-- javascript data libs -->
 
-	<link rel="stylesheet" href="css/custom.css" />
+  <script src="js/x-translation.js" type="text/javascript">
+</script><!-- javascript shared libs -->
 
-	<link rel="stylesheet" href="css/portal-editor.css" />
-	<link rel="stylesheet" href="portal/css/portal.css" />
-	<!-- Mobile Angular UI CSS -->
-    <link rel="stylesheet" href="dist/css/mobile-angular-ui-hover.min.css" />
-    <link rel="stylesheet" href="dist/css/mobile-angular-ui-base.min.css" />
-    <link rel="stylesheet" href="dist/css/mobile-angular-ui-desktop.min.css" />
+  <script src="js/safeUrlEncoder.js" type="text/javascript">
+</script>
+  <script src="js/QueryFilter.js" type="text/javascript">
+</script><!-- Mobile Angular UI JS -->
 
-	<!-- javascript global -->
-	<script src="lib/rangy/rangy-core.js"></script>
-	<script src="lib/angular/angular.js"></script>
-	<script src="lib/angular-re-captcha/angular-re-captcha.js"></script>
-	<script src="lib/angular-route/angular-route.js"></script>
-	<script src="lib/angular-cookies/angular-cookies.js"></script>
-	<script src="lib/angular-translate/angular-translate.js"></script>
-	<script src="lib/angular-translate-handler-log/angular-translate-handler-log.min.js"></script>
-	<script src="lib/angular-translate-storage-cookie/angular-translate-storage-cookie.js"></script>
-	<script src="lib/ace-builds/src-min-noconflict/ace.js"></script>
-	<script src="lib/angular-ui-ace/ui-ace.js"></script>
+  <script src="dist/js/mobile-angular-ui.min.js" type="text/javascript">
+</script><!-- Required to use $touch, $swipe, $drag and $translate services -->
 
-	<script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
-    <script src="bower_components/angular-animate/angular-animate.js"></script>
-    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
-    <script src="bower_components/angular-resource/angular-resource.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
-    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-    <script src="bower_components/angular-touch/angular-touch.js"></script>
+  <script src="dist/js/mobile-angular-ui.gestures.min.js" type="text/javascript">
+</script>
+  <script src="cordova.js" type="text/javascript">
+</script>
 
-	<!-- javascript new libs-->
-	<script src="js/xpsui.min.js"></script>
-	<script src="js/x-main.js"></script>
-
-	<!-- javascript data libs -->
-	<script src="js/x-translation.js"></script>
-
-	<!-- javascript shared libs -->
-	<script src="js/safeUrlEncoder.js"></script>
-	<script src="js/QueryFilter.js"></script>
-
-	<!-- Mobile Angular UI JS -->
-    <script src="dist/js/mobile-angular-ui.min.js"></script>
-    <!-- Required to use $touch, $swipe, $drag and $translate services -->
-    <script src="dist/js/mobile-angular-ui.gestures.min.js"></script>
-    <script src="cordova.js"></script>
-    <script src="bower_components/angular-base64/angular-base64.min.js"></script>
-	<script type="text/javascript" src="js/PushNotification.js"></script>
-        
-        <script type="text/javascript">
+  <script type="text/javascript">
+//<![CDATA[
+  var regId = '';
+  var browser =  null;
+  //]]>
+  </script>
+  <script src="js/PushNotification.js" type="text/javascript">
+</script>
+  <script type="text/javascript">
+//<![CDATA[
             var pushNotification;
-			var regId = '';
             
             function onDeviceReady() {
-				// This is for alph testing to allow untrusted SSL certificate. Set it to fals on production.
-				cordova.plugins.certificates.trustUnsecureCerts(true);
-                $("#app-status-ul").append('<li>deviceready event received</li>');
+                                // This is for alph testing to allow untrusted SSL certificate. Set it to fals on production.
+                                cordova.plugins.certificates.trustUnsecureCerts(true);
+                $("#app-status-ul").append('<li>deviceready event received<\/li>');
                 
-				document.addEventListener("backbutton", function(e)
-				{
-                	$("#app-status-ul").append('<li>backbutton event received</li>');
-  					
-      				if( $("#home").length > 0)
-					{
-						// call this to get a new token each time. don't call it to reuse existing token.
-						//pushNotification.unregister(successHandler, errorHandler);
-						e.preventDefault();
-						navigator.app.exitApp();
-					}
-					else
-					{
-						navigator.app.backHistory();
-					}
-				}, false);
-			
-				try 
-				{ 
-                	pushNotification = window.plugins.pushNotification;
-		      $("#app-status-ul").append('<li>registering ' + device.platform + '</li>');
-                	if (device.platform == 'android' || device.platform == 'Android' ||
+                                document.addEventListener("backbutton", function(e)
+                                {
+                        $("#app-status-ul").append('<li>backbutton event received<\/li>');
+                                        
+                                if( $("#home").length > 0)
+                                        {
+                                                // call this to get a new token each time. don't call it to reuse existing token.
+                                                //pushNotification.unregister(successHandler, errorHandler);
+                                                e.preventDefault();
+                                                navigator.app.exitApp();
+                                        }
+                                        else
+                                        {
+                                                navigator.app.backHistory();
+                                        }
+                                }, false);
+                        
+                                try 
+                                { 
+                        pushNotification = window.plugins.pushNotification;
+                      $("#app-status-ul").append('<li>registering ' + device.platform + '<\/li>');
+                        if (device.platform == 'android' || device.platform == 'Android' ||
                             device.platform == 'amazon-fireos' ) {
-			pushNotification.register(successHandler, errorHandler, {"senderID":"37091511118","ecb":"onNotification"});		// required!
-					} else {
-                    	pushNotification.register(tokenHandler, errorHandler, {"badge":"true","sound":"true","alert":"true","ecb":"onNotificationAPN"});	// required!
-                	}
+                        pushNotification.register(successHandler, errorHandler, {"senderID":"850139036961","ecb":"onNotification","forceShow" : "true"});               // required!
+                                        } else {
+                        pushNotification.register(tokenHandler, errorHandler, {"badge":"true","sound":"true","alert":"true","ecb":"onNotificationAPN"});        // required!
+                        }
                 }
-				catch(err) 
-				{ 
-					txt="There was an error on this page.\n\n"; 
-					txt+="Error description: " + err.message + "\n\n"; 
-					alert(txt); 
-				} 
+                                catch(err) 
+                                { 
+                                        txt="There was an error on this page.\n\n"; 
+                                        txt+="Error description: " + err.message + "\n\n"; 
+                                        alert(txt); 
+                                } 
             }
             
             // handle APNS notifications for iOS
             function onNotificationAPN(e) {
                 if (e.alert) {
-                     $("#app-status-ul").append('<li>push-notification: ' + e.alert + '</li>');
+                     $("#app-status-ul").append('<li>push-notification: ' + e.alert + '<\/li>');
                      // showing an alert also requires the org.apache.cordova.dialogs plugin
                      navigator.notification.alert(e.alert);
                 }
@@ -139,112 +190,122 @@
             
             // handle GCM notifications for Android
             function onNotification(e) {
-                $("#app-status-ul").append('<li>EVENT -> RECEIVED:' + e.event + '</li>');
+                $("#app-status-ul").append('<li>EVENT -> RECEIVED:' + e.event + '<\/li>');
                 
                 switch( e.event )
                 {
                     case 'registered':
-					if ( e.regid.length > 0 )
-					{
-						regId = e.regid;
-						$("#app-status-ul").append('<li>REGISTERED -> REGID:' + e.regid + "</li>");
-						// Your GCM push server needs to know the regID before it can push to this device
-						// here is where you might want to send it the regID for later use.
-						console.log("regID = " + e.regid);
-					}
+                                        if ( e.regid.length > 0 )
+                                        {
+                                                regId = e.regid;
+                                                $("#app-status-ul").append('<li>REGISTERED -> REGID:' + e.regid + "<\/li>");
+                                                // Your GCM push server needs to know the regID before it can push to this device
+                                                // here is where you might want to send it the regID for later use.
+                                                console.log("regID = " + e.regid);
+                                        }
                     break;
                     
                     case 'message':
-                    	// if this flag is set, this notification happened while we were in the foreground.
-                    	// you might want to play a sound to get the user's attention, throw up a dialog, etc.
-                    	if (e.foreground)
-                    	{
-							$("#app-status-ul").append('<li>--INLINE NOTIFICATION--' + '</li>');
-						      
-						        // on Android soundname is outside the payload. 
-					                // On Amazon FireOS all custom attributes are contained within payload
-					                var soundfile = e.soundname || e.payload.sound;
-					                // if the notification contains a soundname, play it.
-					                // playing a sound also requires the org.apache.cordova.media plugin
-					                var my_media = new Media("/android_asset/www/"+ soundfile);
-							my_media.play();
-						}
-						else
-						{	// otherwise we were launched because the user touched a notification in the notification tray.
-							if (e.coldstart)
-								$("#app-status-ul").append('<li>--COLDSTART NOTIFICATION--' + '</li>');
-							else
-							$("#app-status-ul").append('<li>--BACKGROUND NOTIFICATION--' + '</li>');
-						}
-						//amazon-fireos only
-                        $("#app-status-ul").append('<li>DATE/TIME: ' + e.payload.timeStamp + '</li>');	
-						//android only
-						$("#app-status-ul").append('<li>MESSAGE NUMBER: ' + e.payload.msgcnt + '</li>');
-						$("#app-status-ul").append('<li>MESSAGE: ' + e.payload.message + '</li>');
-                        
+                        // if this flag is set, this notification happened while we were in the foreground.
+                        // you might want to play a sound to get the user's attention, throw up a dialog, etc.
+                        if (e.foreground)
+                        {
+                                                        $("#app-status-ul").append('<li>--INLINE NOTIFICATION--' + '<\/li>');
+                                                      
+                                                        // on Android soundname is outside the payload. 
+                                                        // On Amazon FireOS all custom attributes are contained within payload
+                                                        var soundfile = e.soundname || e.payload.sound;
+                                                        // if the notification contains a soundname, play it.
+                                                        // playing a sound also requires the org.apache.cordova.media plugin
+                                                        var my_media = new Media("/android_asset/www/"+ soundfile);
+                                                                        my_media.play();
+                                                }
+                                                else
+                                                {       // otherwise we were launched because the user touched a notification in the notification tray.
+                                                        if (e.coldstart)
+                                                                $("#app-status-ul").append('<li>--COLDSTART NOTIFICATION--' + '<\/li>');
+                                                        else
+                                                        $("#app-status-ul").append('<li>--BACKGROUND NOTIFICATION--' + '<\/li>');
+                                                }
+                                                //amazon-fireos only
+                        $("#app-status-ul").append('<li>DATE/TIME: ' + e.payload.timeStamp + '<\/li>');  
+                                                //android only
+                                                $("#app-status-ul").append('<li>MESSAGE NUMBER: ' + e.payload.msgcnt + '<\/li>');
+                                                $("#app-status-ul").append('<li>MESSAGE: ' + e.payload.message + '<\/li>');
+                                                if(e.payload.url) {
+                                                    //location.href=e.payload.url + '?regid=' + regId;
+                                                	if(browser) {
+                                                		browser.close();
+                                                	}
+                                                	browser = window.inAppBrowserXwalk.open(e.payload.url + '?regid=' + regId, '_blank', 'location=yes, zoom=no, toolbarHeight=25');
+                                                }
+                                                	
+                                                    //window.open(e.payload.url + '?regid=' + regId, '_blank');                       
                     break;
                     
                     case 'error':
-						$("#app-status-ul").append('<li>ERROR -> MSG:' + e.msg + '</li>');
+                                                $("#app-status-ul").append('<li>ERROR -> MSG:' + e.msg + '<\/li>');
                     break;
                     
                     default:
-						$("#app-status-ul").append('<li>EVENT -> Unknown, an event was received and we do not know what it is</li>');
+                                                $("#app-status-ul").append('<li>EVENT -> Unknown, an event was received and we do not know what it is<\/li>');
                     break;
                 }
             }
             
             function tokenHandler (result) {
-                $("#app-status-ul").append('<li>token: '+ result +'</li>');
+                $("#app-status-ul").append('<li>token: '+ result +'<\/li>');
                 // Your iOS push server needs to know the token before it can push to this device
                 // here is where you might want to send it the token for later use.
             }
-			
+                        
             function successHandler (result) {
-                $("#app-status-ul").append('<li>success:'+ result +'</li>');
+                $("#app-status-ul").append('<li>success:'+ result +'<\/li>');
             }
             
             function errorHandler (error) {
-                $("#app-status-ul").append('<li>error:'+ error +'</li>');
+                $("#app-status-ul").append('<li>error:'+ error +'<\/li>');
             }
             
-			document.addEventListener('deviceready', onDeviceReady, true);
-         </script>
-	
+                        document.addEventListener('deviceready', onDeviceReady, true);
+  //]]>
+  </script>
 
 </head>
-<body>
 
-<div class="x-fixed-header">
-	<div class="x-logo">
-		<img src="img/logo.svg">
+<body>
+  <div class="x-fixed-header"><img src="img/logo.svg" /></div>
+
+  <div class="x-main-content">
+
+    <div class="scrollable" style="width: 100%; top: 2px;">
+      <div class="scrollable-header"></div>
+
+      <div class="scrollable-content" ui-scroll-bottom='bottomReached()' style=
+      "padding: 10px; background-color: #FFCE0D">
+        <center>
+          <img src='img/homelogo.png' />
+        </center>
+
+        <h3>To access preferred Membery sites, open a web browser on desktop or other
+        device and log into the Membery sites. After the login, click on <i class="icon-question-circle"></i> icon and display
+        the help page. A QR-Code will be generated on the fly. Scan the QR-Code by
+        clicking the "SCAN QR-CODE" button below.</h3><!---<div id="app-status-div">
+                                <ul id="app-status-ul">
+                                        <li>Notifications</li>
+                                </ul>
+                        </div>-->
+      </div>
+</div></div>
+	<div class="scrollable-footer">
+		<div class="app" style="width: 100%; background-color: #FFCE0D; border-color: trading;">
+          <center>
+            <button id="scanner" class='btn-primary' style="width=80%; font-size: 2em;">SCAN QR-CODE</button>
+          </center>
+			<script type="text/javascript" src="js/camera.js"></script>
+		</div>
+		<script type="text/javascript" src="js/query.js"></script>
 	</div>
 
-</div>
-
-<div class="x-main-content">
-<div ng-controller="mainController">
-</div>
-<div class="scrollable" style="width: 100%; top: 2px;">
-<div class="scrollable-header"><!-- ... --></div>
-<div class="scrollable-content" style="margin-top: 5px; margin-bottom: 5px; padding: 10px; background-color: #FFCE0D">
-<center><img src='img/homelogo.png' /> </center>
-<h3>To access preferred Membery sites, open a web browser on desktop or other device and log into the Membery sites. After the login, click on <i class="icon-question-circle"></i> icon and display the help page. A QR-Code will be generated on the fly. Scan the QR-Code by clicking the "SCAN QR-CODE" button below.</h3>
-<!--<div id="app-status-div">
-				<ul id="app-status-ul">
-					<li>Notifications</li>
-				</ul>
-			</div>-->
-<div class="scrollable-footer">
-<div class="app" style="width: 100%; background-color: #FFCE0D; border-color: trading;">
-<center><button id="scanner" class='btn-primary' style="width=80%; font-size: 2em;">SCAN QR-CODE</button></center>
-	
-
-		<script type="text/javascript" src="js/jquery.min.js"></script>
-		<script type="text/javascript" src="js/camera.js"></script>
-</div>
-<script src="js/query.js"></script>
- </div>
-</div>
 </body>
 </html>
