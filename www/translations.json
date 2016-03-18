@@ -1,0 +1,18 @@
+{
+   "en": {
+      "description": "To access preferred Membery sites, open a web browser on desktop or other device and log into the Membery sites. After the login, click on <i class=\"icon-question-circle\"><\/i> icon and display the help page. A QR-Code will be generated on the fly. Scan the QR-Code by clicking the \"SCAN QR-CODE\" button below.",
+      "scanbutton": "SCAN QR-CODE"
+   },
+   "sk": {
+      "description": "Pre prístup k preferovaná miesta člena, otvorte webový prehliadač na ploche alebo v inom zariadení a prihláste sa na stránku Membery. Po prihlásení kliknite na <i class=\"icon-question-circle\"><\/i> na ikonu a zobrazí sa stránka s nápovedou. QR-Code budú generované v reálnom čase. Skenovanie QR-Code kliknutím na tlačidlo \"Skenovanie QR-Code\" nižšie.",
+      "scanbutton": "Skenovanie QR-Code"
+   },
+   "cz": {
+      "description": "Pro přístup k preferovaná místa člena, otevřete webový prohlížeč na ploše nebo v jiném zařízení a přihlaste se na stránky Membery. Po přihlášení klikněte na <i class = \"icon-question-circle \"> <\/ i> na ikonu a zobrazí se stránka s nápovědou. QR-Code budou generovány v reálném čase. Skenování QR-Code kliknutím na tlačítko \"Skenování QR-Code\" níže.",
+      "scanbutton": "Skenování QR-Code"
+   },
+   "ja": {
+      "description": "メンバリーにアクセスするには、ウェブブラウザをデスクトップPCまたは他の機器で開きサイトにログインしてください。ログイン後、<i class=\"icon-question-circle\"><\/i>アイコンをクリックし、ヘルプページを表示してください。ヘルプページにQRコードが生成され表示されます。このQRコードをメンバリーモバイルアプリ下側「QRコードをスキャン」のボタンをクリックしてスキャンしてください。自動で指定のメンバリーサイトへリダイレクトされます。",
+      "scanbutton": "QRコードをスキャン"
+   }
+}

@@ -1,0 +1,4 @@
+{
+	"description": "Pre prístup k preferovaná miesta člena, otvorte webový prehliadač na ploche alebo v inom zariadení a prihláste sa na stránku Membery. Po prihlásení kliknite na <i class=\"icon-question-circle\"><\/i> na ikonu a zobrazí sa stránka s nápovedou. QR-Code budú generované v reálnom čase. Skenovanie QR-Code kliknutím na tlačidlo \"Skenovanie QR-Code\" nižšie.",
+	"scanbutton": "Skenovanie QR-Code"
+}

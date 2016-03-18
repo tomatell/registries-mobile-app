@@ -1,1 +1,0 @@
-<div><a href="{{data.href|httpPrefixed}}" {% if data.newWindow %}target="_blank"{% endif %}>{{data.title}}</a></div>

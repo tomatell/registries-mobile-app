@@ -1,0 +1,4 @@
+{
+	"description": "To access preferred Membery sites, open a web browser on desktop or other device and log into the Membery sites. After the login, click on <i class=\"icon-question-circle\"><\/i> icon and display the help page. A QR-Code will be generated on the fly. Scan the QR-Code by clicking the \"SCAN QR-CODE\" button below.",
+	"scanbutton": "SCAN QR-CODE"
+}

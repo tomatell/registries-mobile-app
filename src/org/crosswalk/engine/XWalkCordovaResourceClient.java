@@ -106,15 +106,14 @@ public class XWalkCordovaResourceClient extends XWalkResourceClient {
     @Override
     public boolean shouldOverrideUrlLoading(XWalkView view, String url) {
          if(url.equalsIgnoreCase("membery://index")) {
-                    Log.d("DEBUG", url);
+            Log.d("DEBUG", url);
 
-                    view.load("file:///android_asset/www/index.html", null);
+            view.load("file:///android_asset/www/index.html", null);
 
-                    return true;
-                } else {
-                    return parentEngine.client.onNavigationAttempt(url);
-                }
-        
+            return true;
+        } else {
+            return parentEngine.client.onNavigationAttempt(url);
+        }        
     }
 
 

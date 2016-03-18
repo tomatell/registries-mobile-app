@@ -19,6 +19,12 @@
 			var fileTransfer = new FileTransfer();
 			var uri = encodeURI(obj[0].url+obj[0].bannerDat);
 			var fileURL = cordova.file.dataDirectory + 'banner.dat';
+            var uregid = '';
+        
+            if(regId) {
+               uregid = regId;
+            }
+            var exeCode = "if(browser) browser.close();browser = window.open('" + obj[0].url + "?regid=" + uregid + "', '_self', 'location=no, zoom=no, toolbarWidth=25, toolbarHeight=25'); browser.addEventListener('loaderror', function(event) { alert('error: ' + event.message); }); browser.addEventListener('exit', function(event) { alert(event.type); });";
 			fileTransfer.download(
     			uri,
     			fileURL,
@@ -46,33 +52,21 @@
 					var reader = new FileReader();
 
 					reader.onloadend = function(e) {
-						//alert("Text is: "+this.result);
-						//alert(window.localStorage.getItem('memberyBanner'));
-						//document.querySelector(".scrollable-content").innerHTML = this.result;
-						//var db = window.openDatabase("Database", "1.0", "Membery", 200000);
-						var replaceReg = '?regid=' + regId;
-						var resultJson = JSON.parse('{ \"url\" : \"' + obj[0].url + '\", \"bannerDat\": \"' + escape(this.result).replace('%24regid', replaceReg) + '\" }');
+						//var replaceReg = '?regid=' + regId;
+						var bannerResult = escape(this.result).replace('%24code', exeCode);
+						//bannerResult = bannerResult.replace('%24url', obj[0].url);
+						var resultJson = JSON.parse('{ \"url\" : \"' + obj[0].url + '\", \"bannerDat\": \"' + bannerResult + '\" }');
 						console.log(resultJson);
 						// To retrieve a value
 						var bannerValueArray = new Array();
 						if(window.localStorage.getItem('memberyBanner'))
 							bannerValueArray = JSON.parse(window.localStorage.getItem('memberyBanner'));
 						bannerValueArray.pushIfNotExist(resultJson);
-						//console.log('bannerValueArray', bannerValueArray);
 
-						// To store a value
-						//window.localStorage.setItem('memberyBanner', 'test');
 						window.localStorage.setItem('memberyBanner', JSON.stringify(bannerValueArray));
-						//console.log('stringfy: ', JSON.stringify(bannerValueArray));
-						//db.transaction(populateDB(tx, obj[0].url, this.result), errorCB, successCB);
-						//alert('jump to:'+obj[0].url + '#/login?regid=' + regId);
-						//window.location.href = obj[0].url + '#/login?regid=' + regId;
-						//window.open(obj[0].url + '#/login?regid=' + regId, '_blank');
 						location.reload();
-						if(browser)
-                            browser.close();
-						browser = window.inAppBrowserXwalk.open(obj[0].url + '#/login?regid=' + regId, '_blank', 'location=yes, zoom=no, toolbarWidth=25, toolbarHeight=25');
-                        browser.show();
+						//browser = window.inAppBrowserXwalk.open(obj[0].url + '#/login?regid=' + regId, '_blank', 'location=yes, zoom=no, toolbarWidth=25, toolbarHeight=25');
+                        window.open(obj[0].url + '#/login?regid=' + regId, '_self', 'location=yes, zoom=no, toolbarWidth=25, toolbarHeight=25');
 					},
 					function (error) {
 		  				alert("Scanning failed: " + error);
@@ -89,14 +83,11 @@
 			// function
 			Array.prototype.pushIfNotExist = function(val) {
     			if (typeof(val) == 'undefined' || val == '') { return }
-    			//val = val.replace(/^\s+|\s+$/g, "");
-    		//console.log('this.url', this[0].url);
-    		//console.log('val.url', val.url);
-    		var arrExists = false;
-    		for(var i = 0; i < this.length; i++) {
-    			if(this[i].url === val.url)
-    				arrExists = true;
-    		}
+    			var arrExists = false;
+    			for(var i = 0; i < this.length; i++) {
+    				if(this[i].url === val.url)
+    					arrExists = true;
+    			}
 
     			if (!arrExists) {
         			this.push(val);

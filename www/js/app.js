@@ -8,6 +8,8 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 //angular.module('starter', ['ionic', 'ngCordova'])
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
+
+
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
     if (window.cordova && window.cordova.plugins.Keyboard) {
@@ -20,19 +22,6 @@ angular.module('starter', ['ionic', 'starter.controllers'])
   });
 })
 
-MemberyApp.controller("BarcodeController", function($scope, $cordovaBarcodeScanner) {
- 
-    $scope.scanBarcode = function() {
-        $cordovaBarcodeScanner.scan().then(function(imageData) {
-            alert(imageData.text);
-            console.log("Barcode Format -> " + imageData.format);
-            console.log("Cancelled -> " + imageData.cancelled);
-        }, function(error) {
-            console.log("An error happened -> " + error);
-        });
-    };
- 
-});
 
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
@@ -40,46 +29,10 @@ MemberyApp.controller("BarcodeController", function($scope, $cordovaBarcodeScann
   .state('app', {
     url: "/app",
     abstract: true,
-    templateUrl: "templates/menu.html",
+    templateUrl: "index.html",
     controller: 'AppCtrl'
   })
 
-  .state('app.search', {
-    url: "/search",
-    views: {
-      'menuContent': {
-        templateUrl: "templates/search.html"
-      }
-    }
-  })
-
-  .state('app.browse', {
-    url: "/browse",
-    views: {
-      'menuContent': {
-        templateUrl: "templates/browse.html"
-      }
-    }
-  })
-    .state('app.playlists', {
-      url: "/playlists",
-      views: {
-        'menuContent': {
-          templateUrl: "templates/playlists.html",
-          controller: 'PlaylistsCtrl'
-        }
-      }
-    })
-
-  .state('app.single', {
-    url: "/playlists/:playlistId",
-    views: {
-      'menuContent': {
-        templateUrl: "templates/playlist.html",
-        controller: 'PlaylistCtrl'
-      }
-    }
-  });
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/playlists');
-});
+})

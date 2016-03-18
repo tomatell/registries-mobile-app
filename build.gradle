@@ -23,7 +23,10 @@ apply plugin: 'android'
 
 buildscript {
     repositories {
-        mavenCentral()
+        mavenLocal()
+        maven {
+            url 'https://download.01.org/crosswalk/releases/crosswalk/android/maven2'
+        }
     }
 
     // Switch the Android Gradle plugin version requirement depending on the
@@ -160,10 +163,12 @@ task cdvPrintProps << {
 
 android {
       lintOptions {
-          checkReleaseBuilds false
+          //checkReleaseBuilds false
           // Or, if you prefer, you can continue to check for errors in release builds,
           // but continue the build even when errors are found:
-          abortOnError false
+          // abortOnError false
+          disable 'MissingTranslation'
+          disable 'ExtraTranslation'
       }
 
     sourceSets {
