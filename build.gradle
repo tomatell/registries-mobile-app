@@ -261,9 +261,6 @@ dependencies {
     // SUB-PROJECT DEPENDENCIES START
     debugCompile project(path: "CordovaLib", configuration: "debug")
     releaseCompile project(path: "CordovaLib", configuration: "release")
-    compile "com.android.support:support-v13:22+"
-    compile "com.android.support:support-v4:+"
-    compile "com.google.android.gms:play-services-gcm:+"
     // SUB-PROJECT DEPENDENCIES END
 }
 
@@ -326,3 +323,6 @@ for (def func : cdvPluginPostBuildExtras) {
 if (hasProperty('postBuildExtras')) {
     postBuildExtras()
 }
+
+// To avoid conflict with android-support-v13 when Push plugin is used
+configurations { all*.exclude group: 'com.android.support', module: 'support-v4' }

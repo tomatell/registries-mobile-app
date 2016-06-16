@@ -32,6 +32,7 @@
     <allow-navigation href="geo:*" />
     <allow-navigation href="data:*" />
     <platform name="android">
+        <preference name="android-targetSdkVersion" value="22"/>
         <hook type="before_platform_add" src="hooks/setup_before_adding_platform.js" />
         <hook type="after_platform_add" src="hooks/android_setup_after_adding_platform.js" />
         <allow-intent href="market:*" />
@@ -75,6 +76,45 @@
         <splash height="1334" src="res/ios/splash/Default-667h.png" width="750" />
         <splash height="2208" src="res/ios/splash/Default-736h.png" width="1242" />
         <splash height="1242" src="res/ios/splash/Default-Landscape-736h.png" width="2208" />
+    </platform>
+    <platform name="wp8">
+        <preference name="windows-target-version" value="8.0" />
+        <hook type="after_platform_add" src="hooks/windows_setup_after_adding_platform.js" />
+        <hook type="before_platform_add" src="hooks/windows_setup_before_adding_platform.js" />
+        <icon src="res/windows/icons/ApplicationIcon-24x24.png" />
+        <icon height="24" src="res/wp8/icons/ApplicationIcon-24x24.png" width="24" />
+        <icon height="33" src="res/wp8/icons/ApplicationIcon-33x33.png" width="33" />
+        <icon height="44" src="res/wp8/icons/ApplicationIcon-44x44.png" width="44" />
+        <icon height="42" src="res/wp8/icons/ApplicationIcon-44x44.png" width="50" />
+        <icon height="58" src="res/wp8/icons/ApplicationIcon-58x58.png" width="58" />
+        <icon height="62" src="res/wp8/icons/ApplicationIcon-62x62.png" width="62" />
+        <icon height="70" src="res/wp8/icons/ApplicationIcon-70x70.png" width="70" />
+        <icon height="71" src="res/wp8/icons/ApplicationIcon-71x71.png" width="71" />
+        <icon height="99" src="res/wp8/icons/ApplicationIcon-99x99.png" width="99" />
+        <icon height="106" src="res/wp8/icons/ApplicationIcon-106x106.png" width="106" />
+        <icon height="120" src="res/wp8/icons/ApplicationIcon-120x120.png" width="120" />
+        <icon height="159" src="res/wp8/icons/Background.png" width="159" />
+        <icon height="150" src="res/wp8/icons/ApplicationIcon-150x150.png" width="150" />
+        <icon height="170" src="res/wp8/icons/ApplicationIcon-170x170.png" width="170" />
+        <icon height="210" src="res/wp8/icons/ApplicationIcon-210x210.png" width="210" />
+        <icon height="360" src="res/wp8/icons/ApplicationIcon-360x360.png" width="360" />
+        <icon height="300" src="res/wp8/icons/AppTitleIcon-300x300.pn" width="300" />
+        <icon height="358" src="res/wp8/icons/ApplicationIcon-358x358.png" width="358" />
+        <splash height="800" src="res/wp8/splash/Splashscreen.png" width="480" />
+    </platform>
+    <platform name="windows">
+        <preference name="windows-target-version" value="10.0" />
+        <hook type="after_platform_add" src="hooks/windows_setup_after_adding_platform.js" />
+        <hook type="before_platform_add" src="hooks/windows_setup_before_adding_platform.js" />
+        <icon src="res/windows/StoreLogo.png" target="StoreLogo" />
+        <icon src="res/windows/Square30x30Logo.png" target="Square30x30Logo" />
+        <icon src="res/Windows/Square44x44Logo.png" target="Square44x44Logo" />
+        <icon src="res/Windows/Square70x70Logo.png" target="Square70x70Logo" />
+        <icon src="res/Windows/Square71x71Logo.png" target="Square71x71Logo" />
+        <icon src="res/Windows/Square150x150Logo.png" target="Square150x150Logo" />
+        <icon src="res/Windows/Square310x310Logo.png" target="Square310x310Logo" />
+        <icon src="res/Windows/WideLogo.png" target="Wide310x150Logo" />
+        <splash src="res/Windows/SplashScreen.png" target="SplashScreen" />
     </platform>
     <preference name="CROSSWALK_ANDROID_COMMANDLINE" value="--disable-pull-to-refresh-effect" />
     <preference name="LIB_MODE" value="embedded" />
