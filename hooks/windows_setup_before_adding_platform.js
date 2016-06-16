@@ -14,7 +14,8 @@ var pluginlist = [
     "https://github.com/danjarvis/cordova-plugin-crosswalk-certificate",
     "cordova-plugin-statusbar",
     "cordova-plugin-globalization",
-    "org.apache.cordova.dialogs"
+    "cordova-plugin-dialogs",
+    "cordova-plugin-vibration"
 ];
  
 // no need to configure below

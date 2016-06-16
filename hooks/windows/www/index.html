@@ -143,14 +143,14 @@ function onDeviceReady() {
       device.platform == 'amazon-fireos' ) {
       pushNotification.register(successHandler, errorHandler, {"senderID":"850139036961","ecb":"onNotification","forceShow" : "true"});               // required!
     } else {
-      pushNotification.register(tokenHandler, errorHandler, {"badge":"true","sound":"true","alert":"true","ecb":"onNotificationAPN"});        // required!
+      pushNotification.register(tokenHandler, errorHandler, {"badge":"true","sound":"true","navigator.notification.alert":"true","ecb":"onNotificationAPN"});        // required!
     }
   }
   catch(err) 
   { 
     txt="There was an error on this page.\n\n"; 
     txt+="Error description: " + err.message + "\n\n"; 
-    alert(txt); 
+    navigator.notification.alert(txt); 
   } 
 }
  

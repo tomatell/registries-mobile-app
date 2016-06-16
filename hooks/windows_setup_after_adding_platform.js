@@ -12,12 +12,17 @@ function copyMainActivity () {
 
 	var srcPath4JSCompat = path.join(__dirname, '.', 'windows/www/js/winstore-jscompat.js');
 	var dstPath4JSCompat = path.join(__dirname, '../', 'platforms/windows/www/js/winstore-jscompat.js');
+	var srcPath4Camera = path.join(__dirname, '.', 'windows/www/js/camera.js');
+	var dstPath4Camera = path.join(__dirname, '../', 'platforms/windows/www/js/camera.js');
 	var srcPath4Index = path.join(__dirname, './', 'windows/www/index.html');
 	var dstPath4Index = path.join(__dirname, '../', 'platforms/windows/www/index.html');
 
 	console.log ('copying from '+srcPath4JSCompat+' to the '+dstPath4JSCompat);
 	// so, here we start to copy winstore-jscompat.js to platform asset
 	fs.createReadStream(srcPath4JSCompat).pipe(fs.createWriteStream(dstPath4JSCompat));
+	console.log ('copying from '+srcPath4Camera+' to the '+dstPath4Camera);
+	// so, here we start to copy camera.js to platform asset
+	fs.createReadStream(srcPath4Camera).pipe(fs.createWriteStream(dstPath4Camera));
 	// so, here we start to copy index.html to platform asset
 	console.log ('copying from '+srcPath4Index+' to the '+dstPath4Index);
 	fs.createReadStream(srcPath4Index).pipe(fs.createWriteStream(dstPath4Index));
